@@ -30,8 +30,8 @@ pip install -r luffy/requirements.txt
 ```
 LUFFY/
 ├── luffy/                 # Core framework
-│   ├── deepscaler/        # Scaling utilities (⚠️ API integration needed)
-│   ├── verl/              # RL training components (⚠️ Some features incomplete)
+│   ├── deepscaler/        # Scaling utilities (✅ OpenAI API implemented, ⚠️ Gemini API pending)
+│   ├── verl/              # RL training components (✅ Batch processing implemented, ⚠️ FSDP pending)
 │   └── ...
 ├── data/                  # Training data and scripts
 ├── eval_scripts/          # Evaluation utilities
@@ -43,18 +43,20 @@ LUFFY/
 
 - This is a **development version** with incomplete implementations
 - Many functions contain TODO markers indicating pending work
-- API integrations (OpenAI, Gemini) are currently placeholder implementations
-- FSDP and distributed training features need completion
+- ✅ **OpenAI API integration fully completed** (logging, batch processing, timeout remaining)
+- ⚠️ **Gemini/Vertex API integration** still needs full implementation
+- ✅ **Batch dimension fold/unfold processing fully completed** (optimizations remaining)
+- ⚠️ **FSDP and distributed training features** need completion
 
 
 ### 🔴 High Priority TODOs
 
-- **API Integration**: OpenAI API implementation completed (Gemini still needs completion)
+- **API Integration**: ✅ OpenAI API completed, ⚠️ Gemini API implementation needed
 - **Reward System**: Parallel processing and validation for reward computation  
-- **FSDP Training**: Model loading and distributed training setup
-- **Data Processing**: Batch dimension fold/unfold completed (remaining optimizations pending)
+- **FSDP Training**: Model loading, hybrid sharding, and distributed training setup
+- **Data Processing**: ✅ Batch dimension fold/unfold completed, remaining optimizations pending
 
-### 📝 Complete TODO List
+## 📝 Complete TODO List
 
 - [x] **luffy/deepscaler/utils.py:45** - Implement OpenAI API client initialization
 - [x] **luffy/deepscaler/utils.py:46** - Add proper authentication handling
