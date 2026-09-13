@@ -56,7 +56,7 @@ LUFFY/
 - **FSDP Training**: Model loading, hybrid sharding, and distributed training setup
 - **Data Processing**: ✅ Batch dimension fold/unfold completed, remaining optimizations pending
 
-## 📝 Complete TODO List
+### 📝 Complete TODO List
 
 - [x] **luffy/deepscaler/utils.py:45** - Implement OpenAI API client initialization
 - [x] **luffy/deepscaler/utils.py:46** - Add proper authentication handling
